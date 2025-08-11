@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - EcoRecycle Hub</title>
+    <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻️</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+       <h1>BTEC</h1>         <span class="logo-icon">♻️</span>
+                <span class="logo-text">EcoRecycle Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="materials.html" class="nav-link">Materials</a></li>
+                <li><a href="process.html" class="nav-link">Process</a></li>
+                <li><a href="impact.html" class="nav-link">Impact</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                <li><a href="resources.html" class="nav-link active">Resources</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+
+<section class="hero">
+            <div class="hero-background">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="/Hailuo_Video_Text Overlay__“Sustainable Rec_400901185549737993.mp4" type="" />
+        </video>
+    </div>
+    <div class="hero-resources">
+   <div class="container">
+                <h1 class="page-title">Educational <span class="highlight">Resources</span></h1>
+                <p class="page-subtitle">Download guides, worksheets, and teaching materials for free</p>
+                <div class="resource-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="75">0</span>
+                        <span class="stat-label">Resources Available</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="25000">0</span>
+                        <span class="stat-label">Downloads This Month</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="1200">0</span>
+                        <span class="stat-label">Schools Using</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+   
+        </section>
+
+
+        
+
+        <section class="resource-categories">
+            <div class="container">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All Resources</button>
+                    <button class="filter-btn" data-category="students">For Students</button>
+                    <button class="filter-btn" data-category="teachers">For Teachers</button>
+                    <button class="filter-btn" data-category="activities">Activities</button>
+                    <button class="filter-btn" data-category="posters">Posters</button>
+                    <button class="filter-btn" data-category="videos">Videos</button>
+                    <button class="filter-btn" data-category="games">Games</button>
+                </div>
+
+                <div class="resources-grid">
+                    <div class="resource-card" data-category="students">
+                        <div class="resource-icon">📚</div>
+                        <div class="resource-content">
+                            <h3>Complete Student Recycling Guide</h3>
+                            <p>Comprehensive guide covering all recyclable materials, proper sorting techniques, and environmental impact.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">PDF</span>
+                                <span class="resource-size">3.2 MB</span>
+                                <span class="resource-pages">32 pages</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('student-guide.pdf', 'student-guide')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('student-guide')">Preview</button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="students">
+                        <div class="resource-icon">🎒</div>
+                        <div class="resource-content">
+                            <h3>Student Action Handbook</h3>
+                            <p>Practical steps students can take to reduce waste and promote recycling in their daily lives.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">PDF</span>
+                                <span class="resource-size">2.1 MB</span>
+                                <span class="resource-pages">20 pages</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('student-action-handbook.pdf', 'student-action')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('student-action')">Preview</button>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Resources -->
+                    <div class="resource-card" data-category="teachers">
+                        <div class="resource-icon">👩‍🏫</div>
+                        <div class="resource-content">
+                            <h3>Complete Teacher's Lesson Plan</h3>
+                            <p>Detailed lesson plan with activities, assessments, discussion questions, and extension activities.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">PDF</span>
+                                <span class="resource-size">2.8 MB</span>
+                                <span class="resource-pages">24 pages</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('teacher-lesson.pdf', 'teacher-lesson')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('teacher-lesson')">Preview</button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="teachers">
+                        <div class="resource-icon">📋</div>
+                        <div class="resource-content">
+                            <h3>Assessment Rubrics Pack</h3>
+                            <p>Ready-to-use rubrics for evaluating student understanding of recycling concepts.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">PDF</span>
+                                <span class="resource-size">1.5 MB</span>
+                                <span class="resource-pages">12 pages</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('assessment-rubrics.pdf', 'assessment-rubrics')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('assessment-rubrics')">Preview</button>
+                        </div>
+                    </div>
+
+                    <!-- Activity Resources -->
+                    <div class="resource-card" data-category="activities">
+                        <div class="resource-icon">🎯</div>
+                        <div class="resource-content">
+                            <h3>Recycling Bingo Game</h3>
+                            <p>Fun classroom activity to help students learn about different recyclable materials and sorting.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">PDF</span>
+                                <span class="resource-size">1.2 MB</span>
+                                <span class="resource-pages">12 pages</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('recycling-bingo.pdf', 'recycling-bingo')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('recycling-bingo')">Preview</button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="activities">
+                        <div class="resource-icon">🏆</div>
+                        <div class="resource-content">
+                            <h3>30-Day Eco-Challenge Cards</h3>
+                            <p>Daily challenge cards to encourage sustainable practices at home and school.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">PDF</span>
+                                <span class="resource-size">1.8 MB</span>
+                                <span class="resource-pages">16 pages</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('eco-challenge.pdf', 'eco-challenge')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('eco-challenge')">Preview</button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="activities">
+                        <div class="resource-icon">🧩</div>
+                        <div class="resource-content">
+                            <h3>Recycling Sorting Game</h3>
+                            <p>Interactive sorting activity with printable cards and sorting bins.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">PDF</span>
+                                <span class="resource-size">2.3 MB</span>
+                                <span class="resource-pages">18 pages</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('sorting-game.pdf', 'sorting-game')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('sorting-game')">Preview</button>
+                        </div>
+                    </div>
+
+                    <!-- Poster Resources -->
+                    <div class="resource-card" data-category="posters">
+                        <div class="resource-icon">🖼️</div>
+                        <div class="resource-content">
+                            <h3>Recycling Symbols Poster</h3>
+                            <p>High-resolution poster showing all recycling symbols and their meanings.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">PNG</span>
+                                <span class="resource-size">5.2 MB</span>
+                                <span class="resource-pages">A3 Size</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('symbols-poster.png', 'symbols-poster')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('symbols-poster')">Preview</button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="posters">
+                        <div class="resource-icon">🌍</div>
+                        <div class="resource-content">
+                            <h3>Environmental Impact Infographic</h3>
+                            <p>Visual representation of recycling's positive impact on the environment.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">PNG</span>
+                                <span class="resource-size">4.8 MB</span>
+                                <span class="resource-pages">A2 Size</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('impact-infographic.png', 'impact-infographic')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('impact-infographic')">Preview</button>
+                        </div>
+                    </div>
+
+                    <!-- Worksheet Resources -->
+                    <div class="resource-card" data-category="students">
+                        <div class="resource-icon">📝</div>
+                        <div class="resource-content">
+                            <h3>Recycling Worksheet Pack</h3>
+                            <p>Collection of worksheets for different grade levels with answer keys included.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">PDF</span>
+                                <span class="resource-size">3.5 MB</span>
+                                <span class="resource-pages">40 pages</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('worksheet-pack.pdf', 'worksheet-pack')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('worksheet-pack')">Preview</button>
+                        </div>
+                    </div>
+
+                    <!-- Video Resources -->
+                    <div class="resource-card" data-category="videos">
+                        <div class="resource-icon">🎥</div>
+                        <div class="resource-content">
+                            <h3>Recycling Process Video Series</h3>
+                            <p>Educational video series showing how different materials are recycled.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">MP4</span>
+                                <span class="resource-size">125 MB</span>
+                                <span class="resource-pages">5 Videos</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('recycling-videos.zip', 'recycling-videos')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('recycling-videos')">Preview</button>
+                        </div>
+                    </div>
+
+                    <!-- Game Resources -->
+                    <div class="resource-card" data-category="games">
+                        <div class="resource-icon">🎮</div>
+                        <div class="resource-content">
+                            <h3>Interactive Recycling Quiz</h3>
+                            <p>Digital quiz game with multiple difficulty levels and instant feedback.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">HTML</span>
+                                <span class="resource-size">2.1 MB</span>
+                                <span class="resource-pages">Web Game</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download" onclick="downloadResource('recycling-quiz.zip', 'recycling-quiz')">
+                                <span class="download-icon">⬇️</span>
+                                Download
+                            </button>
+                            <button class="btn-preview" onclick="previewResource('recycling-quiz')">Preview</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Featured Resources Section -->
+        <section class="featured-resources">
+            <div class="container">
+                <h2 class="section-title">Featured This Month</h2>
+                <div class="featured-grid">
+                    <div class="featured-card">
+                        <div class="featured-image">🌟</div>
+                        <div class="featured-content">
+                            <h3>New: Climate Change & Recycling Guide</h3>
+                            <p>Explore the connection between recycling and climate change mitigation.</p>
+                            <button class="btn-featured" onclick="downloadResource('climate-guide.pdf', 'climate-guide')">
+                                Download Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="featured-card">
+                        <div class="featured-image">🏆</div>
+                        <div class="featured-content">
+                            <h3>School Competition Kit</h3>
+                            <p>Everything you need to organize a school-wide recycling competition.</p>
+                            <button class="btn-featured" onclick="downloadResource('competition-kit.pdf', 'competition-kit')">
+                                Download Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resource Statistics Section -->
+        <section class="resource-stats-section">
+            <div class="container">
+                <h2 class="section-title">Impact of Our Resources</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-number" data-target="50000">0</div>
+                        <div class="stat-label">Students Reached</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏫</div>
+                        <div class="stat-number" data-target="1200">0</div>
+                        <div class="stat-label">Schools Participating</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-label">Countries Using</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">♻️</div>
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Tons Recycled</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-signup">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Get notified when new resources are available and receive monthly recycling tips</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn-subscribe">Subscribe</button>
+                        </div>
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="teacherUpdates">
+                                <span class="checkmark"></span>
+                                I'm a teacher (get lesson plan updates)
+                            </label>
+                        </div>
+                    </form>
+                    <div class="newsletter-success" id="newsletterSuccess" style="display: none;">
+                        <div class="success-icon">✅</div>
+                        <p>Thank you for subscribing! You'll receive updates about new resources.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resource-request">
+            <div class="container">
+                <div class="request-content">
+                    <h2>Need Something Specific?</h2>
+                    <p>Can't find what you're looking for? Let us know what resources you need!</p>
+                    <form class="request-form" id="resourceRequestForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="requestName">Your Name</label>
+                                <input type="text" id="requestName" name="requestName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="requestEmail">Email</label>
+                                <input type="email" id="requestEmail" name="requestEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="requestType">Resource Type</label>
+                            <select id="requestType" name="requestType" required>
+                                <option value="">Select type</option>
+                                <option value="lesson-plan">Lesson Plan</option>
+                                <option value="worksheet">Worksheet</option>
+                                <option value="activity">Activity</option>
+                                <option value="poster">Poster</option>
+                                <option value="video">Video</option>
+                                <option value="game">Interactive Game</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="requestDescription">Description</label>
+                            <textarea id="requestDescription" name="requestDescription" rows="4" placeholder="Describe what you need..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Message Toast -->
+        <div class="toast" id="successToast">
+            <div class="toast-content">
+                <span class="toast-icon">✅</span>
+                <span class="toast-message">Action completed successfully!</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Resource Preview Modal -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="previewTitle">Resource Preview</h3>
+                <button class="modal-close" onclick="closePreview()">&times;</button>
+            </div>
+            <div class="modal-body" id="previewContent">
+                <!-- Preview content will be loaded here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-download" id="previewDownload">Download Full Resource</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>EcoRecycle Hub</h3>
+                    <p>Empowering the next generation of environmental stewards through education and action.</p>
+                    <div class="footer-social">
+                        <div class="social-icons">
+                            <a href="https://facebook.com/ecorecyclehub" aria-label="Follow us on Facebook">
+                                <img src="/icons8-facebook-logo-48.png" alt="Facebook" />
+                            </a>
+                            <a href="https://twitter.com/ecorecyclehub" aria-label="Follow us on Twitter">
+                                <img src="/icons8-twitter-logo-48.png" alt="Twitter" />
+                            </a>
+                            <a href="https://instagram.com/ecorecyclehub" aria-label="Follow us on Instagram">
+                                <img src="/icons8-instagram-logo-94.png" alt="Instagram" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="materials.html">Materials</a></li>
+                            <li><a href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="#" onclick="filterResources('students')">Student Resources</a></li>
+                            <li><a href="#" onclick="filterResources('teachers')">Teacher Resources</a></li>
+                            <li><a href="#" onclick="filterResources('activities')">Activities</a></li>
+                            <li><a href="#" onclick="filterResources('posters')">Posters</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:resources@ecorecyclehub.org">resources@ecorecyclehub.org</a></p>
+                    <p><a href="tel:+12345678900">+1 (234) 567-8900</a></p>
+                </div>
+            </div>
+           
+        </div>
+    </footer>
+
+    <script src="global.js"></script>
+    <script src="resources.js"></script>
+</body>
+</html>
