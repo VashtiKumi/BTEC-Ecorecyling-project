@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Impact - EcoRecycle Hub</title>
+    <meta name="description" content="Discover the environmental impact of recycling with real data, interactive calculators, and success stories. Calculate your personal recycling impact today.">
+    <meta name="keywords" content="recycling impact, environmental benefits, sustainability, carbon footprint, waste reduction">
+    <link rel="stylesheet" href="impact.css">
+    <link rel="stylesheet" href="global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻️</text></svg>">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+       <h1>BTEC</h1>     <span class="logo-icon" aria-hidden="true">♻️</span>
+                <span class="logo-text">EcoRecycle Hub</span>
+            </div>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="materials.html" class="nav-link" role="menuitem">Materials</a></li>
+                <li role="none"><a href="process.html" class="nav-link" role="menuitem">Process</a></li>
+                <li role="none"><a href="impact.html" class="nav-link active" role="menuitem" aria-current="page">Impact</a></li>
+                <li role="none"><a href="quiz.html" class="nav-link" role="menuitem">Quiz</a></li>
+                <li role="none"><a href="resources.html" class="nav-link" role="menuitem">Resources</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-background">
+                <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+                    <source src="/Hailuo_Video_Text Overlay__“Sustainable Rec_400901185549737993.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="hero-impact">
+                <div class="container">
+                    <h1 id="hero-title" class="page-title">Environmental <span class="highlight">Impact</span></h1>
+                    <p class="page-subtitle">Real data showing the power of recycling</p>
+                    <div class="impact-counter" role="region" aria-label="Environmental impact counter">
+                        <div class="counter-item">
+                            <div class="counter-number" data-target="2400000" aria-live="polite">0</div>
+                            <div class="counter-label">Tons CO₂ Saved This Year</div>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn-primary" onclick="scrollToSection('impact-calculator')" type="button">Calculate Your Impact</button>
+                        <button class="btn-secondary" onclick="scrollToSection('global-stats')" type="button">View Statistics</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="quick-facts" aria-label="Quick recycling facts">
+            <div class="container">
+                <div class="facts-ticker" role="marquee" aria-label="Scrolling recycling facts">
+                    <div class="fact-item">
+                        <span class="fact-icon">🌍</span>
+                        <span class="fact-text">1 ton paper = 17 trees saved</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-icon">⚡</span>
+                        <span class="fact-text">Aluminum saves 95% energy</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-icon">💧</span>
+                        <span class="fact-text">7,000 gallons saved per ton</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-icon">🚗</span>
+                        <span class="fact-text">Reduces car emissions</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-icon">🏭</span>
+                        <span class="fact-text">Less energy for manufacturing</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-icon">🌱</span>
+                        <span class="fact-text">Protects natural resources</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-icon">♻️</span>
+                        <span class="fact-text">Creates green jobs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="global-stats" id="global-stats" aria-labelledby="stats-title">
+            <div class="container">
+                <h2 id="stats-title" class="section-title">Global Recycling Statistics</h2>
+                <div class="stats-overview">
+                    <div class="overview-card">
+                        <div class="overview-icon" aria-hidden="true">📊</div>
+                        <div class="overview-content">
+                            <h3>Current Global Rate</h3>
+                            <div class="overview-stat">32%</div>
+                            <p>of waste is recycled worldwide</p>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="overview-icon" aria-hidden="true">📈</div>
+                        <div class="overview-content">
+                            <h3>Growth Rate</h3>
+                            <div class="overview-stat">+5.2%</div>
+                            <p>annual increase in recycling</p>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="overview-icon" aria-hidden="true">🎯</div>
+                        <div class="overview-content">
+                            <h3>2030 Goal</h3>
+                            <div class="overview-stat">65%</div>
+                            <p>target recycling rate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <canvas id="recyclingRatesChart" aria-label="Global recycling rates by material type chart"></canvas>
+                        <h3>Global Recycling Rates by Material</h3>
+                        <p>Current recycling rates vary significantly by material type</p>
+                        <button class="chart-info-btn" onclick="showChartInfo('recycling-rates')" type="button">Learn More</button>
+                    </div>
+                    <div class="stat-card">
+                        <canvas id="wasteGenerationChart" aria-label="Waste generation trends from 2010 to 2024 chart"></canvas>
+                        <h3>Waste Generation Trends (2010-2024)</h3>
+                        <p>Global waste generation continues to increase</p>
+                        <button class="chart-info-btn" onclick="showChartInfo('waste-generation')" type="button">Learn More</button>
+                    </div>
+                    <div class="stat-card">
+                        <canvas id="energySavingsChart" aria-label="Energy savings from recycling by material chart"></canvas>
+                        <h3>Energy Savings from Recycling</h3>
+                        <p>Percentage of energy saved compared to virgin materials</p>
+                        <button class="chart-info-btn" onclick="showChartInfo('energy-savings')" type="button">Learn More</button>
+                    </div>
+                    <div class="stat-card">
+                        <canvas id="co2ReductionChart" aria-label="CO2 emissions reduction by recycling activity chart"></canvas>
+                        <h3>CO₂ Emissions Reduction</h3>
+                        <p>Annual CO₂ reduction by recycling activity</p>
+                        <button class="chart-info-btn" onclick="showChartInfo('co2-reduction')" type="button">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="regional-impact" aria-labelledby="regional-title">
+            <div class="container">
+                <h2 id="regional-title" class="section-title">Regional Impact Comparison</h2>
+                <div class="region-selector" role="tablist" aria-label="Select region for impact data">
+                    <button class="region-btn active" data-region="north-america" role="tab" aria-selected="true" aria-controls="region-data">North America</button>
+                    <button class="region-btn" data-region="europe" role="tab" aria-selected="false" aria-controls="region-data">Europe</button>
+                    <button class="region-btn" data-region="asia" role="tab" aria-selected="false" aria-controls="region-data">Asia</button>
+                    <button class="region-btn" data-region="global" role="tab" aria-selected="false" aria-controls="region-data">Global Average</button>
+                </div>
+                <div class="region-data" id="region-data" role="tabpanel">
+                    <div class="region-stats">
+                        <div class="region-stat">
+                            <div class="stat-icon" aria-hidden="true">♻️</div>
+                            <div class="stat-value" id="region-recycling-rate">35%</div>
+                            <div class="stat-label">Recycling Rate</div>
+                        </div>
+                        <div class="region-stat">
+                            <div class="stat-icon" aria-hidden="true">🌱</div>
+                            <div class="stat-value" id="region-co2-saved">2.1M</div>
+                            <div class="stat-label">Tons CO₂ Saved</div>
+                        </div>
+                        <div class="region-stat">
+                            <div class="stat-icon" aria-hidden="true">⚡</div>
+                            <div class="stat-value" id="region-energy-saved">15.8B</div>
+                            <div class="stat-label">kWh Energy Saved</div>
+                        </div>
+                        <div class="region-stat">
+                            <div class="stat-icon" aria-hidden="true">💧</div>
+                            <div class="stat-value" id="region-water-saved">890M</div>
+                            <div class="stat-label">Gallons Water Saved</div>
+                        </div>
+                    </div>
+                    <div class="region-chart">
+                        <canvas id="regionalChart" aria-label="Regional impact comparison radar chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact-calculator" id="impact-calculator" aria-labelledby="calculator-title">
+            <div class="container">
+                <h2 id="calculator-title" class="section-title">Personal Impact Calculator</h2>
+                <div class="calculator-container">
+                    <div class="calculator-inputs">
+                        <h3>Enter Your Monthly Recycling</h3>
+                        <form class="input-grid" aria-label="Recycling input form">
+                            <div class="input-group">
+                                <label for="paperInput">
+                                    <span class="input-icon" aria-hidden="true">📄</span>
+                                    Paper (lbs/month)
+                                </label>
+                                <input type="number" id="paperInput" min="0" value="10" step="0.1" aria-describedby="paper-help">
+                                <div class="input-help" id="paper-help">Average: 8-15 lbs</div>
+                            </div>
+                            <div class="input-group">
+                                <label for="plasticInput">
+                                    <span class="input-icon" aria-hidden="true">🥤</span>
+                                    Plastic (lbs/month)
+                                </label>
+                                <input type="number" id="plasticInput" min="0" value="5" step="0.1" aria-describedby="plastic-help">
+                                <div class="input-help" id="plastic-help">Average: 3-8 lbs</div>
+                            </div>
+                            <div class="input-group">
+                                <label for="glassInput">
+                                    <span class="input-icon" aria-hidden="true">🍶</span>
+                                    Glass (lbs/month)
+                                </label>
+                                <input type="number" id="glassInput" min="0" value="3" step="0.1" aria-describedby="glass-help">
+                                <div class="input-help" id="glass-help">Average: 2-5 lbs</div>
+                            </div>
+                            <div class="input-group">
+                                <label for="metalInput">
+                                    <span class="input-icon" aria-hidden="true">🥫</span>
+                                    Metal (lbs/month)
+                                </label>
+                                <input type="number" id="metalInput" min="0" value="2" step="0.1" aria-describedby="metal-help">
+                                <div class="input-help" id="metal-help">Average: 1-4 lbs</div>
+                            </div>
+                        </form>
+                        <div class="calculator-presets">
+                            <h4>Quick Presets:</h4>
+                            <button class="preset-btn" onclick="setPreset('light')" type="button">Light Recycler</button>
+                            <button class="preset-btn" onclick="setPreset('average')" type="button">Average Recycler</button>
+                            <button class="preset-btn" onclick="setPreset('heavy')" type="button">Heavy Recycler</button>
+                        </div>
+                        <button id="calculateBtn" class="btn-calculate" type="button">Calculate My Impact</button>
+                    </div>
+                    
+                    <div class="calculator-results" id="calculatorResults" aria-live="polite">
+                        <h3>Your Annual Environmental Impact</h3>
+                        <div class="results-grid">
+                            <div class="result-item">
+                                <div class="result-icon" aria-hidden="true">🌳</div>
+                                <div class="result-content">
+                                    <div class="result-number" id="treesSaved">0</div>
+                                    <div class="result-label">Trees Saved</div>
+                                    <div class="result-description">Equivalent to a small forest</div>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon" aria-hidden="true">⚡</div>
+                                <div class="result-content">
+                                    <div class="result-number" id="energySaved">0</div>
+                                    <div class="result-label">kWh Energy Saved</div>
+                                    <div class="result-description">Powers a home for days</div>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon" aria-hidden="true">💧</div>
+                                <div class="result-content">
+                                    <div class="result-number" id="waterSaved">0</div>
+                                    <div class="result-label">Gallons Water Saved</div>
+                                    <div class="result-description">Enough for long showers</div>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon" aria-hidden="true">🌍</div>
+                                <div class="result-content">
+                                    <div class="result-number" id="co2Reduced">0</div>
+                                    <div class="result-label">lbs CO₂ Reduced</div>
+                                    <div class="result-description">Like planting trees</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="impact-comparison">
+                            <h4>Your Impact Compared To:</h4>
+                            <div class="comparison-items">
+                                <div class="comparison-item">
+                                    <span class="comparison-icon" aria-hidden="true">🚗</span>
+                                    <span class="comparison-text">Driving <span id="milesSaved">0</span> fewer miles</span>
+                                </div>
+                                <div class="comparison-item">
+                                    <span class="comparison-icon" aria-hidden="true">💡</span>
+                                    <span class="comparison-text">Powering <span id="lightbulbs">0</span> LED bulbs for a year</span>
+                                </div>
+                                <div class="comparison-item">
+                                    <span class="comparison-icon" aria-hidden="true">🏠</span>
+                                    <span class="comparison-text">Heating a home for <span id="heatingDays">0</span> days</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="impact-progress">
+                            <h4>Your Environmental Grade</h4>
+                            <div class="grade-display">
+                                <div class="grade-letter" id="impactGrade">B+</div>
+                                <div class="grade-description" id="gradeDescription">Great job! You're making a significant impact.</div>
+                            </div>
+                            <div class="progress-suggestions" id="progressSuggestions">
+                                <h5>Ways to improve:</h5>
+                                <ul id="suggestionsList">
+                                    <li>Increase paper recycling by 20%</li>
+                                    <li>Start recycling electronics</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="share-impact">
+                            <h4>Share Your Impact</h4>
+                            <div class="share-buttons">
+                                <button class="share-btn twitter" onclick="shareImpact('twitter')" type="button">
+                                    <span class="share-icon" aria-hidden="true">🐦</span>
+                                    Share on Twitter
+                                </button>
+                                <button class="share-btn facebook" onclick="shareImpact('facebook')" type="button">
+                                    <span class="share-icon" aria-hidden="true">📘</span>
+                                    Share on Facebook
+                                </button>
+                                <button class="share-btn copy" onclick="copyImpact()" type="button">
+                                    <span class="share-icon" aria-hidden="true">📋</span>
+                                    Copy Results
+                                </button>
+                                <button class="share-btn download" onclick="downloadReport()" type="button">
+                                    <span class="share-icon" aria-hidden="true">📄</span>
+                                    Download Report
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact-timeline" aria-labelledby="timeline-title">
+            <div class="container">
+                <h2 id="timeline-title" class="section-title">Your Recycling Journey</h2>
+                <div class="timeline-container">
+                    <div class="timeline-item" data-period="daily">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h3>Daily Impact</h3>
+                            <div class="timeline-stats">
+                                <div class="timeline-stat">
+                                    <span class="stat-value" id="daily-co2">0.8</span>
+                                    <span class="stat-unit">lbs CO₂ saved</span>
+                                </div>
+                                <div class="timeline-stat">
+                                    <span class="stat-value" id="daily-energy">2.1</span>
+                                    <span class="stat-unit">kWh saved</span>
+                                </div>
+                            </div>
+                            <p>Every day you recycle makes a difference</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-period="weekly">
+                        <div class="timeline-marker">7</div>
+                        <div class="timeline-content">
+                            <h3>Weekly Impact</h3>
+                            <div class="timeline-stats">
+                                <div class="timeline-stat">
+                                    <span class="stat-value" id="weekly-co2">5.6</span>
+                                    <span class="stat-unit">lbs CO₂ saved</span>
+                                </div>
+                                <div class="timeline-stat">
+                                    <span class="stat-value" id="weekly-trees">0.1</span>
+                                    <span class="stat-unit">trees saved</span>
+                                </div>
+                            </div>
+                            <p>A week of recycling equals significant savings</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-period="monthly">
+                        <div class="timeline-marker">30</div>
+                        <div class="timeline-content">
+                            <h3>Monthly Impact</h3>
+                            <div class="timeline-stats">
+                                <div class="timeline-stat">
+                                    <span class="stat-value" id="monthly-co2">24</span>
+                                    <span class="stat-unit">lbs CO₂ saved</span>
+                                </div>
+                                <div class="timeline-stat">
+                                    <span class="stat-value" id="monthly-water">580</span>
+                                    <span class="stat-unit">gallons saved</span>
+                                </div>
+                            </div>
+                            <p>Monthly habits create lasting change</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-period="yearly">
+                        <div class="timeline-marker">365</div>
+                        <div class="timeline-content">
+                            <h3>Annual Impact</h3>
+                            <div class="timeline-stats">
+                                <div class="timeline-stat">
+                                    <span class="stat-value" id="yearly-co2">292</span>
+                                    <span class="stat-unit">lbs CO₂ saved</span>
+                                </div>
+                                <div class="timeline-stat">
+                                    <span class="stat-value" id="yearly-trees">3.4</span>
+                                    <span class="stat-unit">trees saved</span>
+                                </div>
+                            </div>
+                            <p>Your annual impact creates real change</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-studies" aria-labelledby="case-studies-title">
+            <div class="container">
+                <h2 id="case-studies-title" class="section-title">Success Stories</h2>
+                <div class="case-studies-filter" role="tablist" aria-label="Filter case studies by category">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Stories</button>
+                    <button class="filter-btn" data-filter="school" role="tab" aria-selected="false">Schools</button>
+                    <button class="filter-btn" data-filter="business" role="tab" aria-selected="false">Businesses</button>
+                    <button class="filter-btn" data-filter="community" role="tab" aria-selected="false">Communities</button>
+                </div>
+                <div class="case-studies-grid" role="tabpanel">
+                    <article class="case-study" data-category="school">
+                        <div class="case-study-image" aria-hidden="true">🏫</div>
+                        <div class="case-study-content">
+                            <h3>Lincoln High School</h3>
+                            <p>Implemented comprehensive recycling program with student-led initiatives</p>
+                            <div class="case-study-stats">
+                                <div class="stat">
+                                    <span class="stat-number">75%</span>
+                                    <span class="stat-label">Waste Reduction</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">$5,000</span>
+                                    <span class="stat-label">Annual Savings</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">1,200</span>
+                                    <span class="stat-label">Students Engaged</span>
+                                </div>
+                            </div>
+                            <blockquote class="case-study-quote">
+                                "Our students are now environmental leaders in their community!"
+                                <cite>- Principal Sarah Johnson</cite>
+                            </blockquote>
+                            <button class="case-study-btn" onclick="showCaseStudyDetails('lincoln-high')" type="button">Read Full Story</button>
+                        </div>
+                    </article>
+                    
+                    <article class="case-study" data-category="business">
+                        <div class="case-study-image" aria-hidden="true">🏢</div>
+                        <div class="case-study-content">
+                            <h3>Tech Corp Office</h3>
+                            <p>Zero-waste initiative with employee engagement programs</p>
+                            <div class="case-study-stats">
+                                <div class="stat">
+                                    <span class="stat-number">90%</span>
+                                    <span class="stat-label">Diversion Rate</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">500</span>
+                                    <span class="stat-label">Employees Engaged</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">50</span>
+                                    <span class="stat-label">Tons Diverted</span>
+                                </div>
+                            </div>
+                            <blockquote class="case-study-quote">
+                                "Recycling became part of our company culture."
+                                <cite>- HR Director Mike Chen</cite>
+                            </blockquote>
+                            <button class="case-study-btn" onclick="showCaseStudyDetails('tech-corp')" type="button">Read Full Story</button>
+                        </div>
+                    </article>
+                    
+                    <article class="case-study" data-category="community">
+                        <div class="case-study-image" aria-hidden="true">🏘️</div>
+                        <div class="case-study-content">
+                            <h3>Green Community</h3>
+                            <p>Neighborhood-wide composting and recycling program</p>
+                            <div class="case-study-stats">
+                                <div class="stat">
+                                    <span class="stat-number">60%</span>
+                                    <span class="stat-label">Organic Waste Diverted</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">200</span>
+                                    <span class="stat-label">Families Participating</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">30</span>
+                                    <span class="stat-label">Tons Composted</span>
+                                </div>
+                            </div>
+                            <blockquote class="case-study-quote">
+                                "Our neighborhood is cleaner and greener than ever!"
+                                <cite>- Community Leader Maria Rodriguez</cite>
+                            </blockquote>
+                            <button class="case-study-btn" onclick="showCaseStudyDetails('green-community')" type="button">Read Full Story</button>
+                        </div>
+                    </article>
+
+                    <article class="case-study" data-category="school">
+                        <div class="case-study-image" aria-hidden="true">🎓</div>
+                        <div class="case-study-content">
+                            <h3>University Campus Initiative</h3>
+                            <p>Campus-wide sustainability program with student research integration</p>
+                            <div class="case-study-stats">
+                                <div class="stat">
+                                    <span class="stat-number">85%</span>
+                                    <span class="stat-label">Waste Diversion</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">15,000</span>
+                                    <span class="stat-label">Students Involved</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">200</span>
+                                    <span class="stat-label">Tons Recycled</span>
+                                </div>
+                            </div>
+                            <blockquote class="case-study-quote">
+                                "Students are conducting real research on campus sustainability."
+                                <cite>- Dr. Emily Watson, Environmental Science</cite>
+                            </blockquote>
+                            <button class="case-study-btn" onclick="showCaseStudyDetails('university-campus')" type="button">Read Full Story</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-breakdown" aria-labelledby="benefits-title">
+            <div class="container">
+                <h2 id="benefits-title" class="section-title">Environmental Benefits Breakdown</h2>
+                <div class="benefits-tabs" role="tablist" aria-label="Environmental benefits categories">
+                    <button class="benefit-tab active" data-benefit="climate" role="tab" aria-selected="true" aria-controls="climate-panel">Climate Impact</button>
+                    <button class="benefit-tab" data-benefit="resources" role="tab" aria-selected="false" aria-controls="resources-panel">Resource Conservation</button>
+                    <button class="benefit-tab" data-benefit="pollution" role="tab" aria-selected="false" aria-controls="pollution-panel">Pollution Reduction</button>
+                    <button class="benefit-tab" data-benefit="economy" role="tab" aria-selected="false" aria-controls="economy-panel">Economic Benefits</button>
+                </div>
+                <div class="benefits-content">
+                    <div class="benefit-panel active" id="climate-panel" role="tabpanel" aria-labelledby="climate-tab">
+                        <div class="benefit-visual">
+                            <canvas id="climateChart" aria-label="Climate impact chart showing CO2 emissions avoided over time"></canvas>
+                        </div>
+                        <div class="benefit-details">
+                            <h3>Climate Change Mitigation</h3>
+                            <div class="benefit-stats">
+                                <div class="benefit-stat">
+                                    <div class="stat-icon" aria-hidden="true">🌡️</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number">2.1 billion</div>
+                                        <div class="stat-label">tons CO₂ reduced annually</div>
+                                    </div>
+                                </div>
+                                <div class="benefit-stat">
+                                    <div class="stat-icon" aria-hidden="true">🌍</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number">42 million</div>
+                                        <div class="stat-label">cars worth of emissions avoided</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Recycling significantly reduces greenhouse gas emissions by avoiding the energy-intensive processes required to extract and process virgin materials.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-panel" id="resources-panel" role="tabpanel" aria-labelledby="resources-tab">
+                        <div class="benefit-visual">
+                            <canvas id="resourcesChart" aria-label="Resource conservation chart showing trees and water saved"></canvas>
+                        </div>
+                        <div class="benefit-details">
+                            <h3>Natural Resource Conservation</h3>
+                            <div class="benefit-stats">
+                                <div class="benefit-stat">
+                                    <div class="stat-icon" aria-hidden="true">🌳</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number">17 trees</div>
+                                        <div class="stat-label">saved per ton of paper recycled</div>
+                                    </div>
+                                </div>
+                                <div class="benefit-stat">
+                                    <div class="stat-icon" aria-hidden="true">💧</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number">7,000 gallons</div>
+                                        <div class="stat-label">water saved per ton recycled</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Recycling conserves natural resources by reducing the need for raw material extraction, preserving forests, water sources, and mineral deposits.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-panel" id="pollution-panel" role="tabpanel" aria-labelledby="pollution-tab">
+                        <div class="benefit-visual">
+                            <canvas id="pollutionChart" aria-label="Pollution reduction chart showing percentage reduction by type"></canvas>
+                        </div>
+                        <div class="benefit-details">
+                            <h3>Pollution Reduction</h3>
+                            <div class="benefit-stats">
+                                <div class="benefit-stat">
+                                    <div class="stat-icon" aria-hidden="true">🏭</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number">74%</div>
+                                        <div class="stat-label">less air pollution from steel recycling</div>
+                                    </div>
+                                </div>
+                                <div class="benefit-stat">
+                                    <div class="stat-icon" aria-hidden="true">🌊</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number">35%</div>
+                                        <div class="stat-label">less water pollution</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Recycling reduces air and water pollution by minimizing the need for mining, logging, and manufacturing processes that release harmful pollutants.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-panel" id="economy-panel" role="tabpanel" aria-labelledby="economy-tab">
+                        <div class="benefit-visual">
+                            <canvas id="economyChart" aria-label="Economic benefits chart showing job creation and economic activity"></canvas>
+                        </div>
+                        <div class="benefit-details">
+                            <h3>Economic Impact</h3>
+                            <div class="benefit-stats">
+                                <div class="benefit-stat">
+                                    <div class="stat-icon" aria-hidden="true">💼</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number">1.17 million</div>
+                                        <div class="stat-label">jobs created by recycling industry</div>
+                                    </div>
+                                </div>
+                                <div class="benefit-stat">
+                                    <div class="stat-icon" aria-hidden="true">💰</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number">$117 billion</div>
+                                        <div class="stat-label">in wages and economic activity</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>The recycling industry creates jobs and generates significant economic activity while providing cost savings for manufacturers and consumers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="action-challenge" aria-labelledby="challenge-title">
+            <div class="container">
+                <div class="challenge-content">
+                    <h2 id="challenge-title">Take the 30-Day Recycling Challenge</h2>
+                    <p>Join thousands of students making a difference</p>
+                    <div class="challenge-stats">
+                        <div class="challenge-stat">
+                            <span class="stat-number" data-target="15000">0</span>
+                            <span class="stat-label">Students Participating</span>
+                        </div>
+                        <div class="challenge-stat">
+                            <span class="stat-number" data-target="500">0</span>
+                            <span class="stat-label">Schools Involved</span>
+                        </div>
+                        <div class="challenge-stat">
+                            <span class="stat-number" data-target="2500">0</span>
+                            <span class="stat-label">Tons Recycled</span>
+                        </div>
+                    </div>
+                    <div class="challenge-actions">
+                        <a href="https://ecorecyclehub.org/resources" class="btn-challenge primary">Join the Challenge</a>
+                        <button class="btn-challenge secondary" onclick="showChallengeDetails()" type="button">Learn More</button>
+                    </div>
+                    <div class="challenge-preview">
+                        <h3>Challenge Highlights:</h3>
+                        <div class="challenge-items">
+                            <div class="challenge-item">
+                                <span class="item-icon" aria-hidden="true">📱</span>
+                                <span class="item-text">Daily tracking app</span>
+                            </div>
+                            <div class="challenge-item">
+                                <span class="item-icon" aria-hidden="true">🏆</span>
+                                <span class="item-text">Weekly leaderboards</span>
+                            </div>
+                            <div class="challenge-item">
+                                <span class="item-icon" aria-hidden="true">🎁</span>
+                                <span class="item-text">Eco-friendly prizes</span>
+                            </div>
+                            <div class="challenge-item">
+                                <span class="item-icon" aria-hidden="true">🌱</span>
+                                <span class="item-text">Real impact tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-signup" aria-labelledby="newsletter-title">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2 id="newsletter-title">Stay Updated on Environmental Impact</h2>
+                        <p>Get monthly reports on global recycling progress and tips to increase your personal impact.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletterForm" aria-label="Newsletter subscription form">
+                        <div class="form-group">
+                            <label for="newsletterEmail" class="sr-only">Email address</label>
+                            <input type="email" id="newsletterEmail" placeholder="Enter your email address" required aria-describedby="newsletter-benefits">
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </div>
+                        <div class="newsletter-benefits" id="newsletter-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon" aria-hidden="true">📊</span>
+                                <span class="benefit-text">Monthly impact reports</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon" aria-hidden="true">💡</span>
+                                <span class="benefit-text">Recycling tips & tricks</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon" aria-hidden="true">🎯</span>
+                                <span class="benefit-text">Personal challenges</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal" id="chartInfoModal" role="dialog" aria-labelledby="chart-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('chartInfoModal')" aria-label="Close modal">&times;</button>
+            <div class="modal-body" id="chartInfoContent">
+                <!-- Chart info content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="caseStudyModal" role="dialog" aria-labelledby="case-study-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('caseStudyModal')" aria-label="Close modal">&times;</button>
+            <div class="modal-body" id="caseStudyContent">
+                <!-- Case study content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="challengeModal" role="dialog" aria-labelledby="challenge-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('challengeModal')" aria-label="Close modal">&times;</button>
+            <div class="modal-body" id="challengeContent">
+                <h2 id="challenge-modal-title">30-Day Recycling Challenge</h2>
+                <div class="challenge-details">
+                    <div class="challenge-week">
+                        <h3>Week 1: Foundation Building</h3>
+                        <ul>
+                            <li>Set up recycling stations at home</li>
+                            <li>Learn about local recycling guidelines</li>
+                            <li>Track daily recycling habits</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-week">
+                        <h3>Week 2: Expansion</h3>
+                        <ul>
+                            <li>Add composting to your routine</li>
+                            <li>Involve family and friends</li>
+                            <li>Reduce single-use items</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-week">
+                        <h3>Week 3: Innovation</h3>
+                        <ul>
+                            <li>Find creative reuse projects</li>
+                            <li>Share tips with community</li>
+                            <li>Calculate your impact</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-week">
+                        <h3>Week 4: Leadership</h3>
+                        <ul>
+                            <li>Organize a community event</li>
+                            <li>Mentor new participants</li>
+                            <li>Plan for continued impact</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://ecorecyclehub.org/resources" class="btn-primary">Join Now</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>EcoRecycle Hub</h3>
+                    <p>Empowering the next generation of environmental stewards through education and action.</p>
+                    <div class="footer-social">
+                        <div class="social-icons">
+                            <a href="https://facebook.com/ecorecyclehub" aria-label="Follow us on Facebook">
+                                <img src="/icons8-facebook-logo-48.png" alt="Facebook" />
+                            </a>
+                            <a href="https://twitter.com/ecorecyclehub" aria-label="Follow us on Twitter">
+                                <img src="/icons8-twitter-logo-48.png" alt="Twitter" />
+                            </a>
+                            <a href="https://instagram.com/ecorecyclehub" aria-label="Follow us on Instagram">
+                                <img src="/icons8-instagram-logo-94.png" alt="Instagram" />
+                            </a>
+                            <a href="https://linkedin.com/company/ecorecyclehub" aria-label="Connect with us on LinkedIn">
+                                <img src="" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="https://ecorecyclehub.org">Home</a></li>
+                            <li><a href="https://ecorecyclehub.org/about">About</a></li>
+                            <li><a href="https://ecorecyclehub.org/materials">Materials</a></li>
+                            <li><a href="https://ecorecyclehub.org/resources">Resources</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Impact</h4>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="#global-stats">Statistics</a></li>
+                            <li><a href="#impact-calculator">Calculator</a></li>
+                            <li><a href="#case-studies">Success Stories</a></li>
+                            <li><a href="#action-challenge">Challenge</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:info@ecorecyclehub.org">info@ecorecyclehub.org</a></p>
+                    <p><a href="tel:+12345678900">+1 (234) 567-8900</a></p>
+                    <div class="footer-newsletter">
+                        <p>Subscribe for updates:</p>
+                        <form class="footer-newsletter-form" aria-label="Footer newsletter subscription">
+                            <label for="footer-email" class="sr-only">Email address</label>
+                            <input type="email" id="footer-email" placeholder="Your email" required>
+                            <button type="submit" aria-label="Subscribe to newsletter">→</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+.case-studies {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.case-studies-grid {
+  display: grid !important;
+  visibility: visible !important;
+}
+
+.case-study {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Reduce text sizes for better readability */
+.page-title { font-size: 2.8rem !important; }
+.page-subtitle { font-size: 1.1rem !important; }
+.counter-number { font-size: 3.2rem !important; }
+.section-title { font-size: 2rem !important; }
+    </style>
+
+    <script src="global.js"></script>
+    <script src="impact.js"></script>
+</body>
+</html>
