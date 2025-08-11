@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recyclable Materials - EcoRecycle Hub</title>
+    <link rel="stylesheet" href="materials.css">
+    <link rel="stylesheet" href="global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+         <h1>BTEC</h1>       <span class="logo-icon">♻️</span>
+                <span class="logo-text">EcoRecycle Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="materials.html" class="nav-link active">Materials</a></li>
+                <li><a href="process.html" class="nav-link">Process</a></li>
+                <li><a href="impact.html" class="nav-link">Impact</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-background">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="/Hailuo_Video_Text Overlay__“Sustainable Rec_400901185549737993.mp4" type="" />
+        </video>
+    </div>
+    <div class="hero-materials">
+    <div class="container">
+                <h1 class="page-title">Recyclable <span class="highlight">Materials</span></h1>
+                <p class="page-subtitle">Discover what can be recycled and how to sort properly</p>
+            </div>
+    </div>
+   
+        </section>
+
+        <section class="quick-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon">♻️</div>
+                        <div class="stat-number" data-target="75">0</div>
+                        <div class="stat-label">Billion Tons Recycled Annually</div>
+                    </div>
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-number" data-target="30">0</div>
+                        <div class="stat-label">% Reduction in CO2 Emissions</div>
+                    </div>
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-number" data-target="200">0</div>
+                        <div class="stat-label">Billion Dollar Industry</div>
+                    </div>
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon">🏭</div>
+                        <div class="stat-number" data-target="85">0</div>
+                        <div class="stat-label">% Energy Saved vs New Production</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="materials-grid-section">
+            <div class="container">
+                <h2 class="section-title">Material Categories</h2>
+                <div class="materials-grid">
+                    <div class="material-card paper animate-on-scroll" data-material="paper">
+                        <div class="material-icon">📄</div>
+                        <h3>Paper & Cardboard</h3>
+                        <div class="material-info">
+                            <p><strong>Recyclable:</strong> Newspapers, magazines, cardboard boxes, office paper</p>
+                            <p><strong>Not Recyclable:</strong> Wax-coated paper, tissues, paper towels</p>
+                            <p><strong>Tip:</strong> Remove staples and tape before recycling</p>
+                        </div>
+                        <div class="recycle-rate">
+                            <span>Recycling Rate: 68%</span>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="68"></div>
+                            </div>
+                        </div>
+                        <button class="learn-more-btn" data-material="paper">Learn More</button>
+                    </div>
+
+                    <div class="material-card plastic animate-on-scroll" data-material="plastic">
+                        <div class="material-icon">🥤</div>
+                        <h3>Plastic</h3>
+                        <div class="material-info">
+                            <p><strong>Recyclable:</strong> Bottles, containers with recycling codes 1-7</p>
+                            <p><strong>Not Recyclable:</strong> Plastic bags, styrofoam, broken plastic</p>
+                            <p><strong>Tip:</strong> Clean containers and check recycling codes</p>
+                        </div>
+                        <div class="recycle-rate">
+                            <span>Recycling Rate: 9%</span>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="9"></div>
+                            </div>
+                        </div>
+                        <button class="learn-more-btn" data-material="plastic">Learn More</button>
+                    </div>
+
+                    <div class="material-card glass animate-on-scroll" data-material="glass">
+                        <div class="material-icon">🍶</div>
+                        <h3>Glass</h3>
+                        <div class="material-info">
+                            <p><strong>Recyclable:</strong> Bottles, jars (clear, brown, green)</p>
+                            <p><strong>Not Recyclable:</strong> Mirrors, light bulbs, ceramics</p>
+                            <p><strong>Tip:</strong> Remove lids and rinse containers</p>
+                        </div>
+                        <div class="recycle-rate">
+                            <span>Recycling Rate: 33%</span>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="33"></div>
+                            </div>
+                        </div>
+                        <button class="learn-more-btn" data-material="glass">Learn More</button>
+                    </div>
+
+                    <div class="material-card metal animate-on-scroll" data-material="metal">
+                        <div class="material-icon">🥫</div>
+                        <h3>Metal</h3>
+                        <div class="material-info">
+                            <p><strong>Recyclable:</strong> Aluminum cans, steel cans, foil</p>
+                            <p><strong>Not Recyclable:</strong> Paint cans with residue, aerosol cans</p>
+                            <p><strong>Tip:</strong> Aluminum can be recycled infinitely</p>
+                        </div>
+                        <div class="recycle-rate">
+                            <span>Recycling Rate: 75%</span>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <button class="learn-more-btn" data-material="metal">Learn More</button>
+                    </div>
+
+                    <div class="material-card electronics animate-on-scroll" data-material="electronics">
+                        <div class="material-icon">📱</div>
+                        <h3>Electronics</h3>
+                        <div class="material-info">
+                            <p><strong>Recyclable:</strong> Phones, computers, batteries, cables</p>
+                            <p><strong>Special Handling:</strong> Take to certified e-waste centers</p>
+                            <p><strong>Tip:</strong> Wipe personal data before recycling</p>
+                        </div>
+                        <div class="recycle-rate">
+                            <span>Recycling Rate: 20%</span>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="20"></div>
+                            </div>
+                        </div>
+                        <button class="learn-more-btn" data-material="electronics">Learn More</button>
+                    </div>
+
+                    <div class="material-card organic animate-on-scroll" data-material="organic">
+                        <div class="material-icon">🍎</div>
+                        <h3>Organic Waste</h3>
+                        <div class="material-info">
+                            <p><strong>Compostable:</strong> Food scraps, yard waste, paper towels</p>
+                            <p><strong>Not Compostable:</strong> Meat, dairy, oils, pet waste</p>
+                            <p><strong>Tip:</strong> Start a home compost bin</p>
+                        </div>
+                        <div class="recycle-rate">
+                            <span>Composting Rate: 5%</span>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="5"></div>
+                            </div>
+                        </div>
+                        <button class="learn-more-btn" data-material="organic">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recycling Symbols Guide -->
+        <section class="recycling-symbols">
+            <div class="container">
+                <h2 class="section-title">Recycling Symbols Guide</h2>
+                <div class="symbols-grid">
+                    <div class="symbol-card animate-on-scroll">
+                        <div class="symbol">♳</div>
+                        <h4>PET/PETE (1)</h4>
+                        <p>Water bottles, food containers</p>
+                    </div>
+                    <div class="symbol-card animate-on-scroll">
+                        <div class="symbol">♴</div>
+                        <h4>HDPE (2)</h4>
+                        <p>Milk jugs, detergent bottles</p>
+                    </div>
+                    <div class="symbol-card animate-on-scroll">
+                        <div class="symbol">♵</div>
+                        <h4>PVC (3)</h4>
+                        <p>Pipes, vinyl siding</p>
+                    </div>
+                    <div class="symbol-card animate-on-scroll">
+                        <div class="symbol">♶</div>
+                        <h4>LDPE (4)</h4>
+                        <p>Plastic bags, squeeze bottles</p>
+                    </div>
+                    <div class="symbol-card animate-on-scroll">
+                        <div class="symbol">♷</div>
+                        <h4>PP (5)</h4>
+                        <p>Yogurt containers, bottle caps</p>
+                    </div>
+                    <div class="symbol-card animate-on-scroll">
+                        <div class="symbol">♸</div>
+                        <h4>PS (6)</h4>
+                        <p>Disposable cups, foam packaging</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+<section class="sorting-game">
+    <div class="container">
+        <h2 class="section-title">Interactive Sorting Challenge</h2>
+        <div class="game-container">
+            <div class="game-instructions">
+                <p>🎯 <strong>Drag and drop items into the correct recycling bins!</strong></p>
+                <p>💡 Look at each item and decide which bin it belongs in</p>
+            </div>
+            
+            <div class="game-status">
+                <div class="score-display">
+                    <span class="score-label">Score: <span id="current-score">0</span>/6</span>
+                    <span class="attempts-label">Attempts: <span id="total-attempts">0</span></span>
+                </div>
+                <div class="game-progress">
+                    <div class="progress-bar-game">
+                        <div class="progress-fill" id="game-progress"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-to-sort" id="draggable-items">
+                <div class="draggable-item" draggable="true" data-type="paper" data-item="newspaper">
+                    <span class="item-emoji">📰</span>
+                    <span class="item-name">Newspaper</span>
+                </div>
+                <div class="draggable-item" draggable="true" data-type="plastic" data-item="bottle">
+                    <span class="item-emoji">🥤</span>
+                    <span class="item-name">Plastic Bottle</span>
+                </div>
+                <div class="draggable-item" draggable="true" data-type="glass" data-item="jar">
+                    <span class="item-emoji">🍶</span>
+                    <span class="item-name">Glass Jar</span>
+                </div>
+                <div class="draggable-item" draggable="true" data-type="metal" data-item="can">
+                    <span class="item-emoji">🥫</span>
+                    <span class="item-name">Aluminum Can</span>
+                </div>
+                <div class="draggable-item" draggable="true" data-type="organic" data-item="banana">
+                    <span class="item-emoji">🍌</span>
+                    <span class="item-name">Banana Peel</span>
+                </div>
+                <div class="draggable-item" draggable="true" data-type="electronics" data-item="phone">
+                    <span class="item-emoji">📱</span>
+                    <span class="item-name">Old Phone</span>
+                </div>
+            </div>
+
+            <div class="sorting-bins-container">
+                <div class="bin-row">
+                    <div class="recycling-bin" data-bin-type="paper" id="paper-bin">
+                        <div class="bin-header">
+                            <div class="bin-icon">📄</div>
+                            <div class="bin-label">Paper</div>
+                        </div>
+                        <div class="bin-content" id="paper-content">
+                            <div class="bin-placeholder">Drop paper items here</div>
+                        </div>
+                    </div>
+                    
+                    <div class="recycling-bin" data-bin-type="plastic" id="plastic-bin">
+                        <div class="bin-header">
+                            <div class="bin-icon">🥤</div>
+                            <div class="bin-label">Plastic</div>
+                        </div>
+                        <div class="bin-content" id="plastic-content">
+                            <div class="bin-placeholder">Drop plastic items here</div>
+                        </div>
+                    </div>
+                    
+                    <div class="recycling-bin" data-bin-type="glass" id="glass-bin">
+                        <div class="bin-header">
+                            <div class="bin-icon">🍶</div>
+                            <div class="bin-label">Glass</div>
+                        </div>
+                        <div class="bin-content" id="glass-content">
+                            <div class="bin-placeholder">Drop glass items here</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bin-row">
+                    <div class="recycling-bin" data-bin-type="metal" id="metal-bin">
+                        <div class="bin-header">
+                            <div class="bin-icon">🥫</div>
+                            <div class="bin-label">Metal</div>
+                        </div>
+                        <div class="bin-content" id="metal-content">
+                            <div class="bin-placeholder">Drop metal items here</div>
+                        </div>
+                    </div>
+                    
+                    <div class="recycling-bin" data-bin-type="organic" id="organic-bin">
+                        <div class="bin-header">
+                            <div class="bin-icon">🍎</div>
+                            <div class="bin-label">Organic</div>
+                        </div>
+                        <div class="bin-content" id="organic-content">
+                            <div class="bin-placeholder">Drop organic items here</div>
+                        </div>
+                    </div>
+                    
+                    <div class="recycling-bin" data-bin-type="electronics" id="electronics-bin">
+                        <div class="bin-header">
+                            <div class="bin-icon">📱</div>
+                            <div class="bin-label">E-Waste</div>
+                        </div>
+                        <div class="bin-content" id="electronics-content">
+                            <div class="bin-placeholder">Drop electronics here</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <button id="reset-game-btn" class="control-btn reset-btn">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">Reset Game</span>
+                </button>
+                <button id="new-challenge-btn" class="control-btn challenge-btn">
+                    <span class="btn-icon">🎲</span>
+                    <span class="btn-text">New Challenge</span>
+                </button>
+                <button id="show-hints-btn" class="control-btn hints-btn">
+                    <span class="btn-icon">💡</span>
+                    <span class="btn-text">Show Hints</span>
+                </button>
+            </div>
+
+            <div class="game-feedback" id="feedback-area">
+                <!-- Feedback messages will appear here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Tips and Best Practices -->
+        <section class="recycling-tips">
+            <div class="container">
+                <h2 class="section-title">Recycling Tips & Best Practices</h2>
+                <div class="tips-grid">
+                    <div class="tip-card animate-on-scroll">
+                        <div class="tip-icon">🧽</div>
+                        <h4>Clean Before Recycling</h4>
+                        <p>Rinse containers to remove food residue. Clean materials are more likely to be recycled successfully.</p>
+                    </div>
+                    <div class="tip-card animate-on-scroll">
+                        <div class="tip-icon">🔍</div>
+                        <h4>Check Local Guidelines</h4>
+                        <p>Recycling rules vary by location. Check with your local recycling center for specific guidelines.</p>
+                    </div>
+                    <div class="tip-card animate-on-scroll">
+                        <div class="tip-icon">📦</div>
+                        <h4>Break Down Boxes</h4>
+                        <p>Flatten cardboard boxes to save space and make transportation more efficient.</p>
+                    </div>
+                    <div class="tip-card animate-on-scroll">
+                        <div class="tip-icon">🚫</div>
+                        <h4>Avoid Contamination</h4>
+                        <p>Don't mix different materials. One contaminated item can ruin an entire batch.</p>
+                    </div>
+                    <div class="tip-card animate-on-scroll">
+                        <div class="tip-icon">🔋</div>
+                        <h4>Special Items</h4>
+                        <p>Batteries, electronics, and hazardous materials need special handling at designated centers.</p>
+                    </div>
+                    <div class="tip-card animate-on-scroll">
+                        <div class="tip-icon">♻️</div>
+                        <h4>Reduce First</h4>
+                        <p>Remember: Reduce, Reuse, then Recycle. Prevention is better than recycling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Material Detail Modal -->
+        <div id="material-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-body">
+                    <!-- Content will be dynamically inserted -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>EcoRecycle Hub</h3>
+                <p>Empowering the next generation of environmental stewards through education and action.</p>
+                <div class="footer-social">
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><img src="/icons8-facebook-logo-48.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="/icons8-instagram-logo-94.png" alt="Instagram"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="/icons8-twitter-logo-48.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="materials.html">Materials</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#recycling-guide">Recycling Guide</a></li>
+                    <li><a href="#local-centers">Find Centers</a></li>
+                    <li><a href="#educational-materials">Educational Materials</a></li>
+                    <li><a href="#news">Latest News</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>📧 info@ecorecyclehub.edu</p>
+                <p>📞 +233 (053) 865-9744</p>
+                <p>📍 123 Green Street, Eco City, EC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="global.js"></script>
+    <script src="materials.js"></script>
+</body>
+</html>
