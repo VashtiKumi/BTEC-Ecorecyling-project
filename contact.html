@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EcoRecycle Hub</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻️</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+         <h1>BTEC</h1>   <span class="logo-icon">♻️</span>
+                <span class="logo-text">EcoRecycle Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="materials.html" class="nav-link">Materials</a></li>
+                <li><a href="process.html" class="nav-link">Process</a></li>
+                <li><a href="impact.html" class="nav-link">Impact</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+
+<section class="hero">
+            <div class="hero-background">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="/Hailuo_Video_Text Overlay__“Sustainable Rec_400901185549737993.mp4" type="" />
+        </video>
+    </div>
+    <div class="hero-contact">
+            <div class="container">
+                <h1 class="page-title">Get In <span class="highlight">Touch</span></h1>
+                <p class="page-subtitle">Partner with us to bring environmental education to your school</p>
+                <div class="contact-methods">
+                    <div class="contact-method" onclick="scrollToForm()">
+                        <div class="method-icon">📧</div>
+                        <div class="method-text">Email Us</div>
+                    </div>
+                    <div class="contact-method" onclick="callUs()">
+                        <div class="method-icon">📞</div>
+                        <div class="method-text">Call Us</div>
+                    </div>
+                    <div class="contact-method" onclick="requestVisit()">
+                        <div class="method-icon">🏫</div>
+                        <div class="method-text">School Visits</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+   
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-section">
+                        <h2>Send Us a Message</h2>
+                        <div class="form-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <span class="progress-text" id="progressText">0% Complete</span>
+                        </div>
+                        
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                    <span class="field-error" id="firstNameError"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                    <span class="field-error" id="lastNameError"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <span class="field-error" id="emailError"></span>
+                                    <span class="field-success" id="emailSuccess">✓ Valid email</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                                    <span class="field-error" id="phoneError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="organization">School/Organization</label>
+                                <input type="text" id="organization" name="organization" placeholder="Enter your school or organization name">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="role">Your Role</label>
+                                    <select id="role" name="role">
+                                        <option value="">Select your role</option>
+                                        <option value="teacher">Teacher</option>
+                                        <option value="administrator">School Administrator</option>
+                                        <option value="principal">Principal</option>
+                                        <option value="student">Student</option>
+                                        <option value="parent">Parent</option>
+                                        <option value="coordinator">Environmental Coordinator</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gradeLevel">Grade Level (if applicable)</label>
+                                    <select id="gradeLevel" name="gradeLevel">
+                                        <option value="">Select grade level</option>
+                                        <option value="elementary">Elementary (K-5)</option>
+                                        <option value="middle">Middle School (6-8)</option>
+                                        <option value="high">High School (9-12)</option>
+                                        <option value="college">College/University</option>
+                                        <option value="mixed">Mixed Grades</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="partnership">School Partnership</option>
+                                    <option value="resources">Resource Request</option>
+                                    <option value="workshop">Workshop Booking</option>
+                                    <option value="presentation">Assembly Presentation</option>
+                                    <option value="training">Teacher Training</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="media">Media Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="field-error" id="subjectError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="urgency">Priority Level</label>
+                                <select id="urgency" name="urgency">
+                                    <option value="low">Low - General inquiry</option>
+                                    <option value="medium">Medium - Planning ahead</option>
+                                    <option value="high">High - Urgent request</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Please provide details about your request, including any specific dates, number of students, or particular topics of interest..." required></textarea>
+                                <span class="field-error" id="messageError"></span>
+                                <div class="character-count">
+                                    <span id="charCount">0</span>/500 characters
+                                </div>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for updates and new resources
+                                </label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#" onclick="showPrivacyPolicy()">Privacy Policy</a> and Terms of Service *
+                                </label>
+                                <span class="field-error" id="privacyError"></span>
+                            </div>
+
+                            <button type="submit" class="btn-submit" id="submitBtn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading">
+                                    <span class="spinner"></span>
+                                    Sending...
+                                </span>
+                            </button>
+                        </form>
+
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            <div class="success-icon">✅</div>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                            <div class="success-details">
+                                <p><strong>Reference ID:</strong> <span id="referenceId"></span></p>
+                                <p><strong>Expected Response:</strong> Within 24 hours</p>
+                            </div>
+                            <button class="btn-new-message" onclick="resetForm()">Send Another Message</button>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <div class="contact-card">
+                            <h3>Contact Information</h3>
+                            <div class="contact-details">
+                                <div class="contact-item" onclick="copyToClipboard('info@ecorecyclehub.edu')">
+                                    <div class="contact-icon">📧</div>
+                                    <div class="contact-text">
+                                        <strong>Email</strong>
+                                        <p>info@ecorecyclehub.edu</p>
+                                        <small>Click to copy</small>
+                                    </div>
+                                </div>
+                                <div class="contact-item" onclick="callPhone('+15551234567')">
+                                    <div class="contact-icon">📞</div>
+                                    <div class="contact-text">
+                                        <strong>Phone</strong>
+                                        <p>+1 (555) 123-4567</p>
+                                        <small>Click to call</small>
+                                    </div>
+                                </div>
+                                <div class="contact-item" onclick="openMaps()">
+                                    <div class="contact-icon">📍</div>
+                                    <div class="contact-text">
+                                        <strong>Address</strong>
+                                        <p>123 Green Street<br>Eco City, EC 12345</p>
+                                        <small>Click for directions</small>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">🕒</div>
+                                    <div class="contact-text">
+                                        <strong>Office Hours</strong>
+                                        <p>Mon-Fri: 9:00 AM - 5:00 PM<br>Sat: 10:00 AM - 2:00 PM</p>
+                                        <div class="office-status" id="officeStatus">
+                                            <span class="status-indicator"></span>
+                                            <span class="status-text">Checking hours...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="partnership-card">
+                            <h3>School Partnerships</h3>
+                            <p>We offer comprehensive environmental education programs for schools:</p>
+                            <ul>
+                                <li>✅ Curriculum integration support</li>
+                                <li>✅ Teacher training workshops</li>
+                                <li>✅ Student assembly presentations</li>
+                                <li>✅ Recycling program setup</li>
+                                <li>✅ Ongoing educational resources</li>
+                                <li>✅ Impact measurement tools</li>
+                            </ul>
+                            <div class="partnership-stats">
+                                <div class="stat">
+                                    <span class="stat-number" data-target="500">0</span>
+                                    <span class="stat-label">Partner Schools</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number" data-target="50000">0</span>
+                                    <span class="stat-label">Students Reached</span>
+                                </div>
+                            </div>
+                            <button class="btn-partnership" onclick="fillPartnershipForm()">Request Partnership Info</button>
+                        </div>
+
+                        <div class="social-card">
+                            <h3>Follow Us</h3>
+                            <div class="social-links">
+                                <a href="https://facebook.com/ecorecyclehub" class="social-link facebook" target="_blank" rel="noopener">
+                                    <span class="social-icon">📘</span>
+                                    <span>Facebook</span>
+                                    <span class="follower-count">12.5K followers</span>
+                                </a>
+                                <a href="https://twitter.com/ecorecyclehub" class="social-link twitter" target="_blank" rel="noopener">
+                                    <span class="social-icon">🐦</span>
+                                    <span>Twitter</span>
+                                    <span class="follower-count">8.2K followers</span>
+                                </a>
+                                <a href="https://instagram.com/ecorecyclehub" class="social-link instagram" target="_blank" rel="noopener">
+                                    <span class="social-icon">📷</span>
+                                    <span>Instagram</span>
+                                    <span class="follower-count">15.3K followers</span>
+                                </a>
+                                <a href="https://youtube.com/ecorecyclehub" class="social-link youtube" target="_blank" rel="noopener">
+                                    <span class="social-icon">📺</span>
+                                    <span>YouTube</span>
+                                    <span class="follower-count">25.1K subscribers</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="response-time-card">
+                            <h3>Response Times</h3>
+                            <div class="response-times">
+                                <div class="response-item">
+                                    <span class="response-type">General Inquiries</span>
+                                    <span class="response-time">24 hours</span>
+                                </div>
+                                <div class="response-item">
+                                    <span class="response-type">Partnership Requests</span>
+                                    <span class="response-time">48 hours</span>
+                                </div>
+                                <div class="response-item">
+                                    <span class="response-type">Technical Support</span>
+                                    <span class="response-time">4-6 hours</span>
+                                </div>
+                                <div class="response-item">
+                                    <span class="response-type">Urgent Requests</span>
+                                    <span class="response-time">2-4 hours</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-search">
+                    <input type="text" id="faqSearch" placeholder="Search FAQs..." onkeyup="searchFAQs()">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item" data-keywords="school partnership program education">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How can I bring EcoRecycle Hub to my school?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Contact us through the form above or email us directly at info@ecorecyclehub.edu. We'll schedule a consultation to discuss your school's needs and create a customized environmental education program. Our team will work with you to integrate our resources into your curriculum.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="resources free cost price">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Are your resources free to use?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! All our educational resources are completely free for schools and educators. We believe environmental education should be accessible to everyone. This includes lesson plans, worksheets, posters, and digital materials.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="teacher training workshop professional development">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do you offer teacher training?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide comprehensive teacher training workshops, both in-person and virtual, to help educators effectively teach environmental topics. Our training covers curriculum integration, hands-on activities, and assessment strategies.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="school visit presentation assembly">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can you visit our school for presentations?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer school visits and assembly presentations. Our team can present to individual classes or entire school assemblies. Contact us to discuss scheduling and availability in your area. We typically book 2-4 weeks in advance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="age grade level elementary middle high">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What age groups do you serve?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We serve all grade levels from elementary through high school (K-12). Our resources are differentiated by age group, with age-appropriate content and activities for each level.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="cost fee pricing budget">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What are the costs for your services?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most of our services are free, including digital resources and basic consultations. Some specialized services like extended on-site training or custom curriculum development may have associated costs, which we'll discuss upfront.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="toast" id="toast">
+            <div class="toast-content">
+                <span class="toast-icon" id="toastIcon">✅</span>
+                <span class="toast-message" id="toastMessage">Action completed successfully!</span>
+            </div>
+            <button class="toast-close" onclick="hideToast()">&times;</button>
+        </div>
+
+        <div class="modal" id="privacyModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Privacy Policy</h3>
+                    <button class="modal-close" onclick="hidePrivacyPolicy()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>We respect your privacy and are committed to protecting your personal information. This policy outlines how we collect, use, and protect your data when you contact us.</p>
+                    <h4>Information We Collect:</h4>
+                    <ul>
+                        <li>Contact information (name, email, phone)</li>
+                        <li>School/organization details</li>
+                        <li>Message content and preferences</li>
+                    </ul>
+                    <h4>How We Use Your Information:</h4>
+                    <ul>
+                        <li>To respond to your inquiries</li>
+                        <li>To provide educational resources</li>
+                        <li>To send newsletters (if opted in)</li>
+                    </ul>
+                    <p>We never share your information with third parties without your consent.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>EcoRecycle Hub</h3>
+                    <p>Empowering the next generation of environmental stewards through education and action.</p>
+                    <div class="footer-social">
+                        <div class="social-icons">
+                            <a href="https://facebook.com/ecorecyclehub" aria-label="Follow us on Facebook">
+                                <img src="/icons8-facebook-logo-48.png" alt="Facebook" />
+                            </a>
+                            <a href="https://twitter.com/ecorecyclehub" aria-label="Follow us on Twitter">
+                                <img src="/icons8-twitter-logo-48.png" alt="Twitter" />
+                            </a>
+                            <a href="https://instagram.com/ecorecyclehub" aria-label="Follow us on Instagram">
+                                <img src="/icons8-instagram-logo-94.png" alt="Instagram" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="materials.html">Materials</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:info@ecorecyclehub.edu">info@ecorecyclehub.edu</a></p>
+                    <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                </div>
+            </div>
+           
+        </div>
+    </footer>
+
+    <script src="global.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
